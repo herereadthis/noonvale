@@ -6,9 +6,28 @@ Noonvale
 
 Mossflower is simple Tic-Tac-Toe game written with AngularJS
 
-## Build
+## Requirements
+
+You need Node Package Mangager (npm), Bower, and Grunt
+
+```bash
+# check NPM
+$ npm --version
+# else, go to http://nodejs.org/ to install
+# check Bower
+$ bower --version 
+# if not,
+$ sudo npm install -g bower
+# check grunt
+$ grunt --version
+# if not,
+$ sudo npm install -g grunt
 
 ```
+
+## Build
+
+```bash
 $ git clone https://github.com/herereadthis/noonvale.git
 $ cd noonvale/
 $ npm install

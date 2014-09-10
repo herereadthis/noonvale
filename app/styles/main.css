@@ -187,6 +187,9 @@ p {
     height: 30vw;
     border-width: 1vw;
   }
+  .tictac_cell > div {
+    height: 28vw;
+  }
 }
 @media only screen and (min-width: 768px) {
   .tictac_cell {
@@ -194,12 +197,18 @@ p {
     height: 12.8rem;
     border-width: 0.2rem;
   }
+  .tictac_cell > div {
+    height: 12.4rem;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .tictac_cell {
     width: 16rem;
     height: 16rem;
     border-width: 0.3rem;
+  }
+  .tictac_cell > div {
+    height: 15.4rem;
   }
 }
 .tictac_cell:first-child {
