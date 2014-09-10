@@ -230,7 +230,7 @@ figure.bellmaker_container #game_status {
   .tictac_cell {
     width: 30vw;
     height: 30vw;
-    border-width: 1vw;
+    border-width: 0.3rem;
   }
   .tictac_cell > div {
     height: 28vw;

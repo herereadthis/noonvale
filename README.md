@@ -8,7 +8,7 @@ Noonvale is simple Tic-Tac-Toe game written with AngularJS
 
 **[noonvale.herereadthis.com](http://noonvale.herereadthis.com/)**
 
-* You are human player X versus computer player O.
+* You are human player X versus computer player O. Computer player is dumb; it will select any empty cell randomly.
 * It's device agnostic, so it will work on your phone or computer.
 * It uses Yeoman scaffolding, which will allow you to make production instances of the application easily.
 
@@ -41,5 +41,15 @@ $ bower install
 # work in developer mode
 $ grunt serve
 # work in production mode (minified, concactenated)
-# grunt serve:dist
+$ grunt serve:dist
 ```
+
+## Testing
+
+You can check build and testing status on [Travis CI](https://travis-ci.org/herereadthis/noonvale)
+
+```bash
+# test locally
+$ grunt test
+```
+
