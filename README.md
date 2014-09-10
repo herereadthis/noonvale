@@ -53,3 +53,46 @@ You can check build and testing status on [Travis CI](https://travis-ci.org/here
 $ grunt test
 ```
 
+## Scaffolding Structure
+
+Noonvale is an AngularJS application with Yeoman scaffolding. Yeoman is useful because it takes care of all the boilerplate work to build a new application, while adding tasks that help in development and production. For example of "live reload":
+
+**Start the server**
+
+```bash
+$ grunt serve
+# Your browser will automatically open http://localhost:9000/#/
+```
+
+**Open up [app/views/main.html](https://github.com/herereadthis/noonvale/blob/master/app/views/main.html) and append this line to the bottom:**
+
+```html
+<p>Hello World!</p>
+```
+
+Now go back to your browser and the change will appear live.
+
+### NPM
+
+NPM is a package manager for Node programs. You can see the installed packages at [package.json](https://github.com/herereadthis/noonvale/blob/master/package.json). They include Karma for testing, LESS for CSS preprocessing, and JSHint to lint JavaScript.
+
+### Grunt
+
+Grunt is a JavaScript automated task runner that allows you to execute commands as if it were running in a terminal. For example, ```grunt serve``` will load your local environment.
+
+### Bower
+
+Bower is a package manager to handle third-party libraries. Noonvale uses Bower to load AngularJS and other AngularJS resources. Also included are CSS libraries such as [Bellmaker](https://github.com/herereadthis/bellmaker) for handling media queries
+
+### LESS
+
+LESS CSS is a CSS preprocessor. When done right, it can help manage CSS bloat and add semantics to CSS logic.
+* The CSS for the TicTac cells is located at [app/less/tictac.less](https://github.com/herereadthis/noonvale/blob/master/app/less/tictac.less)
+* Some LESS CSS is from herereadthis Bower dependencies, such as [Mossflower](https://github.com/herereadthis/mossflower), a global reset.
+
+## Application Structure
+
+### [App](https://github.com/herereadthis/noonvale/blob/master/app/scripts/app.js)
+### [Services](https://github.com/herereadthis/noonvale/blob/master/app/scripts/services.js)
+### [Filters](https://github.com/herereadthis/noonvale/blob/master/app/scripts/filters.js)
+### [Controllers](https://github.com/herereadthis/noonvale/blob/master/app/scripts/controllers/main.js)
