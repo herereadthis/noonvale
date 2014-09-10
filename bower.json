@@ -14,10 +14,10 @@
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",
-    "angular-scenario": "~1.2.0",
     "bellmaker": "~0.3.5",
     "mossflower": "~0.1.7",
-    "sunflash": "~0.1.5"
+    "sunflash": "~0.1.5",
+    "angular-scenario": "~1.2.24"
   },
   "appPath": "app"
 }
