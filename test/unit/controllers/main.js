@@ -25,6 +25,9 @@ describe('Controller: MainCtrl', function () {
     it('should start at turn 0', function () {
         expect(scope.turn).toBe(0);
     });
+    it('should have no winners in the beginning', function () {
+        expect(scope.winner.identity).toBe(false);
+    });
     // it('should set selected class if a cell is clicked', function () {
     //     element(by.css('.tictac_cell:nth-child(1) div')).click();
     //     expect(element(by.css('div')).getAttribute('class')).toMatch('selected mark_x');
