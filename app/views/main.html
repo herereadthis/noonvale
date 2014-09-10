@@ -4,6 +4,7 @@
     <figcaption>
         <h1>Tic Tac Toe!</h1>
         <p id="game_status">{{ gameStatus }}</p>
+    </figcaption>
     <div id="tictac_container">
         <div class="tictac_cell" ng-repeat="cell in ticTac track by $index">
             <div ng-click="markCell($index)" ng-class="clickSelect($index)">
