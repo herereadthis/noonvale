@@ -8,10 +8,15 @@
  * Controller of the noonvaleApp
  */
 angular.module('noonvaleApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('MainCtrl', ['$scope', function ($scope) {
+        $scope.ticTac = [
+            [null,null,null],
+            [null,null,null],
+            [null,null,null]
+        ];
+        $scope.markCell = function(index,parentIndex) {
+            // console.log('markCell',index,parentIndex);
+            $scope.ticTac[parentIndex][index] = 1;
+            console.log($scope.ticTac.toString());
+        };
+    }]);
