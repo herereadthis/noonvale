@@ -27,7 +27,8 @@ module.exports = function(config) {
       'bower_components/jquery/dist/jquery.js',
       'app/scripts/**/*.js',
       // 'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/unit/**/*.js',
+      'test/unit/*.js'
     ],
 
     // list of files / patterns to exclude
