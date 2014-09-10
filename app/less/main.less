@@ -16,85 +16,151 @@ a:hover {
         width: @pw_large;
     }
 }
+#restart_game {
+    cursor: pointer;
+    color: @color_a_link;
+    display: none;
+    font-weight: 700;
+
+    &:hover {
+        color: @color_a_hover;
+        background-color: @color_tictac_hover;
+    }
+    &:active, &:focus {
+        background-color: @color_tictac_win;
+    }
+    &.reset_on {
+        display: block;
+    }
+}
 figure.bellmaker_container {
     overflow: auto;
+    
+    @media @da_baseline {
+        #restart_game {
+            position: absolute;
+            text-align: center;
+            top: 45vw;
+            left: 16vw;
+            width: 60vw;
+            padding: 3vw 4vw;
+            margin: 1vw auto 0;
+            background-color: @color_tictac_hover_solid;
+            font-size: 8vw;
+            line-height: 8vw;
+            box-shadow: 0 0 8vw 0 rgba(0, 0, 0, 0.8);
+            border-radius: 3vw;
 
-    figcaption {
-
-        @media @da_baseline {
-
+            &:hover {
+                background-color: @color_tictac_hover_solid;
+            }
+            &:active, &:focus {
+                background-color: @color_tictac_win;
+            }
         }
-        @media @da_small {
-            float: left;
-            width: @pw_small / 2;
-            height: @pw_small / 2;
+        figcaption {
         }
-        @media @da_medium {
-            width: @pw_medium / 2;
-            height: @pw_medium / 2;
-        }
-        @media @da_large {
-            width: @pw_large / 2;
-            height: @pw_large / 2;
-        }
-    }
-    h1 {
-        font-weight: 300;
-
-        @media @da_baseline {
+        h1 {
+            font-weight: 300;
             text-align: center;
             font-size: 10vw;
             line-height: 10vw;
             padding: 2vw 0 0 0;
         }
-        @media @da_small {
+        #game_status {
+            text-align: center;
+            padding-top: 2vw;
+            font-size: 5vw;
+            line-height: 5vw;
+        }
+    }
+    @media @da_small {
+        #restart_game {
+            position: static;
+            float: right;
+            width: auto;
+            text-align: right;
+            background-color: transparent;
+            box-shadow: none;
+            padding: (@padding_tictac_small / 8) (@padding_tictac_small / 4);
+            margin: (@padding_tictac_small / 8) (@padding_tictac_small / 2) 0 0;
+            border-radius: 0;
+            .font_p_small;
+
+            &:hover {
+                background-color: @color_tictac_hover;
+            }
+            &:active, &:focus {
+                background-color: @color_tictac_win;
+            }
+        }
+        figcaption {
+            float: left;
+            width: @pw_small / 2;
+            height: @pw_small / 2;
+        }
+        h1 {
             text-align: left;
             margin-left: @padding_tictac_small / 2;
             padding-top: ((@pw_small - (@padding_tictac_small * 2)) / 6) + @padding_tictac_small - 6rem;
             font-size: 6rem;
             line-height: 8rem;
         }
-        @media @da_medium {
-            margin-left: @padding_tictac_medium / 2;
-            padding-top: ((@pw_medium - (@padding_tictac_medium * 2)) / 6) + @padding_tictac_medium - 8rem;
-            font-size: 8rem;
-            line-height: 10rem;
-        }
-        @media @da_large {
-            margin-left: @padding_tictac_large / 2;
-            padding-top: ((@pw_large - (@padding_tictac_large * 2)) / 6) + @padding_tictac_large - 8rem;
-            font-size: 10rem;
-            line-height: 12rem;
-        }
-    }
-    #game_status {
-        text-align: center;
-
-        @media @da_baseline {
-            padding-top: 2vw;
-            font-size: 5vw;
-            line-height: 5vw;
-        }
-        @media @da_small {
+        #game_status {
             text-align: left;
             padding-top: 0;
             margin-left: @padding_tictac_small / 2;
             font-size: 2rem;
             line-height: 2rem;
         }
-        @media @da_medium {
+    }
+    @media @da_medium {
+        #restart_game {
+            padding: (@padding_tictac_medium / 8) (@padding_tictac_medium / 4);
+            margin: (@padding_tictac_medium / 8) (@padding_tictac_medium / 2) 0 0;
+            .font_p_medium;
+        }
+        figcaption {
+            width: @pw_medium / 2;
+            height: @pw_medium / 2;
+        }
+        h1 {
+            margin-left: @padding_tictac_medium / 2;
+            padding-top: ((@pw_medium - (@padding_tictac_medium * 2)) / 6) + @padding_tictac_medium - 8rem;
+            font-size: 8rem;
+            line-height: 10rem;
+        }
+        #game_status {
             padding-top: 0;
             margin-left: @padding_tictac_medium / 2;
             font-size: 3rem;
             line-height: 3rem;
         }
-        @media @da_large {
+    }
+    @media @da_large {
+        #restart_game {
+            padding: (@padding_tictac_large / 8) (@padding_tictac_large / 4);
+            margin: (@padding_tictac_large / 8) (@padding_tictac_large / 2) 0 0;
+            .font_p_large;
+        }
+        figcaption {
+            width: @pw_large / 2;
+            height: @pw_large / 2;
+        }
+        h1 {
+            margin-left: @padding_tictac_large / 2;
+            padding-top: ((@pw_large - (@padding_tictac_large * 2)) / 6) + @padding_tictac_large - 8rem;
+            font-size: 10rem;
+            line-height: 12rem;
+        }
+        #game_status {
             padding-top: 0;
             margin-left: @padding_tictac_large / 2;
             font-size: 4rem;
             line-height: 4rem;
         }
     }
+
 }
 [role="contentinfo"] {
     @media @da_baseline {
@@ -102,8 +168,7 @@ figure.bellmaker_container {
             padding: 2vw 5vw 10vw 5vw;
         }
         p {
-            font-size: 5vw;
-            line-height: 7vw;
+            .font_p_baseline;
             text-align: center;
         }
     }
@@ -116,8 +181,7 @@ figure.bellmaker_container {
             width: (@pw_small - (@padding_tictac_small * 2)) / 2;
         }
         p {
-            font-size: 1.2rem;
-            line-height: 2rem;
+            .font_p_small;
         }
     }
     @media @da_medium {
@@ -127,8 +191,7 @@ figure.bellmaker_container {
             width: (@pw_medium - (@padding_tictac_medium * 2)) / 2;
         }
         p {
-            font-size: 1.5rem;
-            line-height: 2rem;
+            .font_p_medium;
         }
     }
     @media @da_large {
@@ -139,8 +202,7 @@ figure.bellmaker_container {
             width: (@pw_large - (@padding_tictac_large * 2)) / 2;
         }
         p {
-            font-size: 2rem;
-            line-height: 3rem;
+            .font_p_large;
         }
     }
 }

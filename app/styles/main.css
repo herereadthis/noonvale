@@ -105,6 +105,22 @@ pre > code {
 .sunflash_navmenu li a {
   display: block;
 }
+.font_p_baseline {
+  font-size: 5vw;
+  line-height: 7vw;
+}
+.font_p_small {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.font_p_medium {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.font_p_large {
+  font-size: 2rem;
+  line-height: 3rem;
+}
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -122,84 +138,120 @@ a:hover {
     width: 115.2rem;
   }
 }
+#restart_game {
+  cursor: pointer;
+  color: #043d8c;
+  display: none;
+  font-weight: 700;
+}
+#restart_game:hover {
+  color: #8c043d;
+  background-color: rgba(0, 0, 255, 0.05);
+}
+#restart_game:active,
+#restart_game:focus {
+  background-color: rgba(0, 255, 0, 0.25);
+}
+#restart_game.reset_on {
+  display: block;
+}
 figure.bellmaker_container {
   overflow: auto;
 }
-@media only screen and (min-width: 768px) {
-  figure.bellmaker_container figcaption {
-    float: left;
-    width: 38.4rem;
-    height: 38.4rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  figure.bellmaker_container figcaption {
-    width: 48rem;
-    height: 48rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  figure.bellmaker_container figcaption {
-    width: 57.6rem;
-    height: 57.6rem;
-  }
-}
-figure.bellmaker_container h1 {
-  font-weight: 300;
-}
 @media only screen and (min-width: 320px) {
+  figure.bellmaker_container #restart_game {
+    position: absolute;
+    text-align: center;
+    top: 45vw;
+    left: 16vw;
+    width: 60vw;
+    padding: 3vw 4vw;
+    margin: 1vw auto 0;
+    background-color: rgba(221, 221, 255, 0.9);
+    font-size: 8vw;
+    line-height: 8vw;
+    box-shadow: 0 0 8vw 0 rgba(0, 0, 0, 0.8);
+    border-radius: 3vw;
+  }
+  figure.bellmaker_container #restart_game:hover {
+    background-color: rgba(221, 221, 255, 0.9);
+  }
+  figure.bellmaker_container #restart_game:active,
+  figure.bellmaker_container #restart_game:focus {
+    background-color: rgba(0, 255, 0, 0.25);
+  }
   figure.bellmaker_container h1 {
+    font-weight: 300;
     text-align: center;
     font-size: 10vw;
     line-height: 10vw;
     padding: 2vw 0 0 0;
   }
-}
-@media only screen and (min-width: 768px) {
-  figure.bellmaker_container h1 {
-    text-align: left;
-    margin-left: 2rem;
-    padding-top: 9.46666667rem;
-    font-size: 6rem;
-    line-height: 8rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  figure.bellmaker_container h1 {
-    margin-left: 2rem;
-    padding-top: 10.66666667rem;
-    font-size: 8rem;
-    line-height: 10rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  figure.bellmaker_container h1 {
-    margin-left: 2rem;
-    padding-top: 13.86666667rem;
-    font-size: 10rem;
-    line-height: 12rem;
-  }
-}
-figure.bellmaker_container #game_status {
-  text-align: center;
-}
-@media only screen and (min-width: 320px) {
   figure.bellmaker_container #game_status {
+    text-align: center;
     padding-top: 2vw;
     font-size: 5vw;
     line-height: 5vw;
   }
 }
 @media only screen and (min-width: 768px) {
+  figure.bellmaker_container #restart_game {
+    position: static;
+    float: right;
+    width: auto;
+    text-align: right;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 1rem 0 0;
+    border-radius: 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  figure.bellmaker_container #restart_game:hover {
+    background-color: rgba(0, 0, 255, 0.05);
+  }
+  figure.bellmaker_container #restart_game:active,
+  figure.bellmaker_container #restart_game:focus {
+    background-color: rgba(0, 255, 0, 0.25);
+  }
+  figure.bellmaker_container figcaption {
+    float: left;
+    width: 38.4rem;
+    height: 38.4rem;
+  }
+  figure.bellmaker_container h1 {
+    text-align: left;
+    margin-left: 1rem;
+    padding-top: 8.13333333rem;
+    font-size: 6rem;
+    line-height: 8rem;
+  }
   figure.bellmaker_container #game_status {
     text-align: left;
     padding-top: 0;
-    margin-left: 2rem;
+    margin-left: 1rem;
     font-size: 2rem;
     line-height: 2rem;
   }
 }
 @media only screen and (min-width: 1024px) {
+  figure.bellmaker_container #restart_game {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 2rem 0 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  figure.bellmaker_container figcaption {
+    width: 48rem;
+    height: 48rem;
+  }
+  figure.bellmaker_container h1 {
+    margin-left: 2rem;
+    padding-top: 10.66666667rem;
+    font-size: 8rem;
+    line-height: 10rem;
+  }
   figure.bellmaker_container #game_status {
     padding-top: 0;
     margin-left: 2rem;
@@ -208,9 +260,25 @@ figure.bellmaker_container #game_status {
   }
 }
 @media only screen and (min-width: 1280px) {
+  figure.bellmaker_container #restart_game {
+    padding: 0.75rem 1.5rem;
+    margin: 0.75rem 3rem 0 0;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  figure.bellmaker_container figcaption {
+    width: 57.6rem;
+    height: 57.6rem;
+  }
+  figure.bellmaker_container h1 {
+    margin-left: 3rem;
+    padding-top: 15.2rem;
+    font-size: 10rem;
+    line-height: 12rem;
+  }
   figure.bellmaker_container #game_status {
     padding-top: 0;
-    margin-left: 2rem;
+    margin-left: 3rem;
     font-size: 4rem;
     line-height: 4rem;
   }
@@ -232,8 +300,8 @@ figure.bellmaker_container #game_status {
   [role="contentinfo"] > div {
     padding: 2rem 0 0 0;
     float: right;
-    margin-right: 2rem;
-    width: 34.4rem;
+    margin-right: 1rem;
+    width: 36.4rem;
   }
   [role="contentinfo"] p {
     font-size: 1.2rem;
@@ -257,8 +325,8 @@ figure.bellmaker_container #game_status {
   }
   [role="contentinfo"] > div {
     padding: 3rem 0 0 0;
-    margin-right: 2rem;
-    width: 53.6rem;
+    margin-right: 3rem;
+    width: 51.6rem;
   }
   [role="contentinfo"] p {
     font-size: 2rem;
@@ -274,10 +342,10 @@ figure.bellmaker_container #game_status {
 }
 @media only screen and (min-width: 768px) {
   #tictac_container {
-    margin: 4rem 2rem 0 0;
+    margin: 2rem 1rem 0 0;
     float: right;
-    width: 34.4rem;
-    height: 34.4rem;
+    width: 36.4rem;
+    height: 36.4rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -289,9 +357,9 @@ figure.bellmaker_container #game_status {
 }
 @media only screen and (min-width: 1280px) {
   #tictac_container {
-    margin: 4rem 2rem 0 0;
-    width: 53.6rem;
-    height: 53.6rem;
+    margin: 6rem 3rem 0 0;
+    width: 51.6rem;
+    height: 51.6rem;
   }
 }
 .tictac_cell {
@@ -312,12 +380,12 @@ figure.bellmaker_container #game_status {
 }
 @media only screen and (min-width: 768px) {
   .tictac_cell {
-    width: 11.46666667rem;
-    height: 11.46666667rem;
+    width: 12.13333333rem;
+    height: 12.13333333rem;
     border-width: 0.2rem;
   }
   .tictac_cell > div {
-    height: 11.06666667rem;
+    height: 11.73333333rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -332,12 +400,12 @@ figure.bellmaker_container #game_status {
 }
 @media only screen and (min-width: 1280px) {
   .tictac_cell {
-    width: 17.86666667rem;
-    height: 17.86666667rem;
+    width: 17.2rem;
+    height: 17.2rem;
     border-width: 0.7rem;
   }
   .tictac_cell > div {
-    height: 16.46666667rem;
+    height: 15.8rem;
   }
 }
 .tictac_cell:nth-child(3n) {
@@ -358,7 +426,7 @@ figure.bellmaker_container #game_status {
 }
 .tictac_cell:hover {
   cursor: pointer;
-  background-color: #f5f5ff;
+  background-color: rgba(0, 0, 255, 0.05);
 }
 .tictac_cell .selected:hover {
   cursor: not-allowed;
@@ -375,8 +443,8 @@ figure.bellmaker_container #game_status {
 }
 @media only screen and (min-width: 768px) {
   .tictac_cell p {
-    font-size: 9.06666667rem;
-    line-height: 11.06666667rem;
+    font-size: 9.73333333rem;
+    line-height: 11.73333333rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -387,8 +455,8 @@ figure.bellmaker_container #game_status {
 }
 @media only screen and (min-width: 1280px) {
   .tictac_cell p {
-    font-size: 12.46666667rem;
-    line-height: 16.46666667rem;
+    font-size: 11.8rem;
+    line-height: 15.8rem;
   }
 }
 .tictac_cell .winset_cell {

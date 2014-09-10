@@ -59,6 +59,16 @@ angular.module('noonvaleApp')
                 }
             }
         };
+        // toggler to hide and show the restart button
+        $scope.restartToggle = function() {
+            // game can end if there are no more turns, or winner is identified
+            if ($scope.winner.identity !== false || $scope.turn === 9) {
+                return 'reset_on';
+            }
+            else {
+                return '';
+            }
+        };
         // function for ngClick, what happens when human player clicks
         $scope.markCell = function(index) {
             var nextMark;
@@ -99,6 +109,21 @@ angular.module('noonvaleApp')
                     $scope.gameStatus = statusMessage.tieGame;
                 }
             }
+        };
+        // reset the game
+        $scope.restartGame = function() {
+            var _l;
+            // make the ticTac array all undefined
+            for (_l in $scope.ticTac) {
+                $scope.ticTac[_l] = undefined;
+            }
+            // set no winner
+            $scope.winner.identity = false;
+            $scope.winner.winSet = [];
+            // reset turns
+            $scope.turn = 0;
+            // reset the game status message
+            $scope.gameStatus = statusMessage.gameOn;
         };
     }]);
 

@@ -114,7 +114,9 @@ The array begins as array of nine undefined values, which becomes ```$scope.ticT
 
 Consequently, all cells should output ```undefined``` at the beginning of the game. Clicking on any cell will trigger the ```markCell``` function. The cell is marked with (1) one and then then it checks to see if there's a winner. If not, then it lets the computer mark a cell with a (0) zero, and again checks to see if a winner exists.
 
-The ```ngClass``` directives are used to mark cells. When a player marks a cell, it fires the ```clickSelect()``` function which will give the cell a ```selected``` class. When a winner is determined, it will grab the indices of the winning subset of cells and mark them to show a winner.
+The ```ngClass``` directives are used to mark cells. When a player marks a cell, it fires the ```clickSelect()``` function which will give the cell a ```selected``` class. When a winner is determined, it will grab the indices of the winning subset of cells and mark them to show a winner. There is also a final directive that toggles the appearance of the game restart button with the function ```restartToggle()```.
+
+When a winner exists or all turns have been exhausted the restart button will appear. It has an ```ngClick``` directive to reset all scope parameters.
 
 #### [Services: services.js](https://github.com/herereadthis/noonvale/blob/master/app/scripts/services.js)
 

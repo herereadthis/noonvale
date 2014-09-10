@@ -4,6 +4,9 @@
     <figcaption>
         <h1>Tic Tac Toe!</h1>
         <p id="game_status">{{ gameStatus }}</p>
+        <p id="restart_game"
+            ng-click="restartGame()" 
+            ng-class="restartToggle()">Restart game!</p>
     </figcaption>
     <div id="tictac_container">
         <div class="tictac_cell" ng-repeat="cell in ticTac track by $index">
