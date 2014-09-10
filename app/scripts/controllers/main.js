@@ -9,46 +9,74 @@
  */
 angular.module('noonvaleApp')
     .controller('MainCtrl', ['$scope', 'TicTacFinger', function ($scope, TicTacFinger) {
-        $scope.ticTac = [
+        var freshArray, statusMessage;
+        freshArray = [
             undefined,undefined,undefined,
             undefined,undefined,undefined,
             undefined,undefined,undefined
         ];
-        $scope.asdf = false;
+        statusMessage = {
+            'gameOn': 'Make a move!',
+            'winnerX': 'Winner is X!',
+            'winnerY': 'Winner is O!',
+            'tieGame': 'Everyone loses!'
+        };
+        $scope.ticTac = freshArray;
+        $scope.turn = 0;
+        $scope.winner = {
+            'identity': false,
+            'winSet': []
+        };
+        $scope.gameStatus = statusMessage.gameOn;
         $scope.clickSelect = function(index) {
+            var classString = '';
             if ($scope.ticTac[index] !== undefined) {
                 if ($scope.ticTac[index] === 1) {
-                    return 'selected mark_x';
+                    classString = classString + ' selected mark_x';
                 }
                 else {
-                    return 'selected mark_o';
+                    classString = classString + ' selected mark_o';
                 }
             }
+            return classString;
         };
-        $scope.markCell = function(index) {
-            var nextMark, winner;
-            if ($scope.ticTac[index] === undefined) {
-                // console.log('markCell',index);
-                $scope.ticTac[index] = 1;
-                winner = TicTacFinger.whoWon($scope.ticTac);
-                // console.log($scope.ticTac.toString());
-                if (winner === 1) {
-                    console.log('winner is X');
-                }
-                else {
-                    // if there are still values to click
-                    if ($scope.ticTac.indexOf(undefined) > -1) {
-                        nextMark = TicTacFinger.randomSelect($scope.ticTac);
-                        $scope.ticTac[nextMark] = 0;
-                        if (TicTacFinger.whoWon($scope.ticTac) === 0) {
-                            console.log('winner is O');
-                        }
+        $scope.markWinSet = function(index) {
+            var _i;
+            if ($scope.winner.identity !== false) {
+                for (_i in $scope.winner.winSet) {
+                    if (index === $scope.winner.winSet[_i]) {
+                        return 'winset_cell';
                     }
                 }
             }
         };
-        // $scope.$watchCollection('ticTac', function() {
-        //     console.log($scope.ticTac.toString());
-        // });
+        $scope.markCell = function(index) {
+            var nextMark;
+            if ($scope.ticTac[index] === undefined && $scope.winner.identity === false) {
+                $scope.turn = $scope.turn + 1;
+                $scope.ticTac[index] = 1;
+                $scope.winner = TicTacFinger.whoWon($scope.ticTac);
+                if ($scope.winner.identity === 1) {
+                    $scope.gameStatus = statusMessage.winnerX;
+                    console.log($scope.winner.winSet);
+                }
+                else {
+                    // if there are still values to click
+                    if ($scope.ticTac.indexOf(undefined) > -1) {
+                        $scope.turn = $scope.turn + 1;
+                        nextMark = TicTacFinger.randomSelect($scope.ticTac);
+                        $scope.ticTac[nextMark] = 0;
+                        $scope.winner = TicTacFinger.whoWon($scope.ticTac);
+                        if ($scope.winner.identity === 0) {
+                            $scope.gameStatus = statusMessage.winnerY;
+                            console.log($scope.winner.winSet);
+                        }
+                    }
+                }
+                if ($scope.turn === 9 && $scope.winner.identity === false) {
+                    $scope.gameStatus = statusMessage.tieGame;
+                }
+            }
+        };
     }]);
 

@@ -1,22 +1,15 @@
 
 
-<div class="bellmaker_container">
+<figure class="bellmaker_container">
+    <figcaption>
+        <h1>Tic Tac Toe!</h1>
+        <p id="game_status">{{ gameStatus }}</p>
+    </figcaption>
     <div id="tictac_container">
         <div class="tictac_cell" ng-repeat="cell in ticTac track by $index">
             <div ng-click="markCell($index)" ng-class="clickSelect($index)">
-                <p>{{ cell | ticTacSymbol }}</p>
+                <p ng-class="markWinSet($index)">{{ cell | ticTacSymbol }}</p>
             </div>
         </div>
     </div>
-</div>
-
-<!--
-        <div class="tictac_row" ng-repeat="row in ticTac track by $index">
-            <div class="tictac_cell" ng-repeat="cell in row track by $index" ng-click="markCell($index,$parent.$index)">
-                <div><p>{{ cell | ticTacSymbol }}</p></div>
-            </div>
-        </div>
--->
-<p>&#x25ef;&#x2715;</p>
-<p>Test Angular: 3 + 2 = {{ 3 + 2 }}</p>
-<p>{{ asdf}}</p>
+</figure>

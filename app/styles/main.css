@@ -31,7 +31,8 @@ h2,
 h3,
 h4,
 p,
-img {
+img,
+figure {
   margin: 0;
 }
 ul,
@@ -127,6 +128,76 @@ p {
   font-size: 1.4rem;
   line-height: 2rem;
 }
+figure.bellmaker_container {
+  overflow: auto;
+}
+@media only screen and (min-width: 768px) {
+  figure.bellmaker_container figcaption {
+    float: left;
+    width: 38.4rem;
+    height: 38.4rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  figure.bellmaker_container figcaption {
+    width: 48rem;
+    height: 48rem;
+  }
+}
+figure.bellmaker_container h1 {
+  font-weight: 300;
+}
+@media only screen and (min-width: 320px) {
+  figure.bellmaker_container h1 {
+    text-align: center;
+    font-size: 10vw;
+    line-height: 10vw;
+    padding: 2vw 0 0 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  figure.bellmaker_container h1 {
+    text-align: left;
+    margin-left: 2rem;
+    padding-top: 9.46666667rem;
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  figure.bellmaker_container h1 {
+    margin-left: 2rem;
+    padding-top: 10.66666667rem;
+    font-size: 8rem;
+    line-height: 10rem;
+  }
+}
+figure.bellmaker_container #game_status {
+  text-align: center;
+}
+@media only screen and (min-width: 320px) {
+  figure.bellmaker_container #game_status {
+    padding-top: 2vw;
+    font-size: 5vw;
+    line-height: 5vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  figure.bellmaker_container #game_status {
+    text-align: left;
+    margin-left: 2rem;
+    padding-top: 0;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  figure.bellmaker_container #game_status {
+    margin-left: 2rem;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
 @media only screen and (min-width: 320px) {
   #tictac_container {
     width: 90vw;
@@ -136,44 +207,18 @@ p {
 }
 @media only screen and (min-width: 768px) {
   #tictac_container {
-    margin: 0 auto;
-    width: 38.4rem;
-    height: 38.4rem;
+    margin: 4rem 2rem 0 0;
+    float: right;
+    width: 34.4rem;
+    height: 34.4rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   #tictac_container {
-    width: 48rem;
-    height: 48rem;
+    margin: 4rem 2rem 0 0;
+    width: 44rem;
+    height: 44rem;
   }
-}
-.tictac_row {
-  clear: both;
-  box-sizing: border-box;
-}
-@media only screen and (min-width: 320px) {
-  .tictac_row {
-    width: 95vw;
-    height: 30vw;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .tictac_row {
-    width: 38.4rem;
-    height: 12.8rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .tictac_row {
-    width: 48rem;
-    height: 16rem;
-  }
-}
-.tictac_row:first-child > div {
-  border-top-color: #ffffff;
-}
-.tictac_row:last-child > div {
-  border-bottom-color: #ffffff;
 }
 .tictac_cell {
   float: left;
@@ -193,22 +238,22 @@ p {
 }
 @media only screen and (min-width: 768px) {
   .tictac_cell {
-    width: 12.8rem;
-    height: 12.8rem;
+    width: 11.46666667rem;
+    height: 11.46666667rem;
     border-width: 0.2rem;
   }
   .tictac_cell > div {
-    height: 12.4rem;
+    height: 11.06666667rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   .tictac_cell {
-    width: 16rem;
-    height: 16rem;
+    width: 14.66666667rem;
+    height: 14.66666667rem;
     border-width: 0.3rem;
   }
   .tictac_cell > div {
-    height: 15.4rem;
+    height: 14.06666667rem;
   }
 }
 .tictac_cell:nth-child(3n) {
@@ -233,7 +278,7 @@ p {
 }
 .tictac_cell .selected:hover {
   cursor: not-allowed;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 .tictac_cell p {
   text-align: center;
@@ -246,13 +291,16 @@ p {
 }
 @media only screen and (min-width: 768px) {
   .tictac_cell p {
-    font-size: 10.4rem;
-    line-height: 12.4rem;
+    font-size: 9.06666667rem;
+    line-height: 11.06666667rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   .tictac_cell p {
-    font-size: 11.4rem;
-    line-height: 15.4rem;
+    font-size: 10.06666667rem;
+    line-height: 14.06666667rem;
   }
+}
+.tictac_cell .winset_cell {
+  background-color: rgba(0, 255, 0, 0.25);
 }
