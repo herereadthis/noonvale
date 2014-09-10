@@ -11,4 +11,14 @@ angular.module('ticTacFilters', []).filter('ticTacSymbol', function() {
             return '\u25ef';
         }
     };
+})
+.filter('disabler', function() {
+    return function(input) {
+        if (input === undefined) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
 });

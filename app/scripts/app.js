@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ticTacFilters'
+    'ticTacFilters',
+    'ticTacServices'
   ])
   .config(function ($routeProvider) {
     $routeProvider

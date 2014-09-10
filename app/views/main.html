@@ -3,7 +3,7 @@
 <div class="bellmaker_container">
     <div id="tictac_container">
         <div class="tictac_cell" ng-repeat="cell in ticTac track by $index">
-            <div ng-click="markCell($index)">
+            <div ng-click="markCell($index)" ng-class="clickSelect($index)">
                 <p>{{ cell | ticTacSymbol }}</p>
             </div>
         </div>
@@ -19,3 +19,4 @@
 -->
 <p>&#x25ef;&#x2715;</p>
 <p>Test Angular: 3 + 2 = {{ 3 + 2 }}</p>
+<p>{{ asdf}}</p>

@@ -231,6 +231,10 @@ p {
   cursor: pointer;
   background-color: #f5f5ff;
 }
+.tictac_cell .selected:hover {
+  cursor: not-allowed;
+  background-color: #ffffff;
+}
 .tictac_cell p {
   text-align: center;
 }
