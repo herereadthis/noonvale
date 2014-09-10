@@ -77,11 +77,17 @@
             height: (@pw_medium / 6) - 0.6rem;
         }
     }
-    &:first-child {
+    &:nth-child(3n) {
+        border-right-color: @color_default;
+    }
+    &:nth-child(3n - 2) {
         border-left-color: @color_default;
     }
-    &:last-child {
-        border-right-color: @color_default;
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        border-top-color: @color_default;
+    }
+    &:nth-child(7), &:nth-child(8), &:nth-child(9) {
+        border-bottom-color: @color_default;
     }
     &:hover {
         cursor: pointer;

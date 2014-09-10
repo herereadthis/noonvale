@@ -211,11 +211,21 @@ p {
     height: 15.4rem;
   }
 }
-.tictac_cell:first-child {
+.tictac_cell:nth-child(3n) {
+  border-right-color: #ffffff;
+}
+.tictac_cell:nth-child(3n - 2) {
   border-left-color: #ffffff;
 }
-.tictac_cell:last-child {
-  border-right-color: #ffffff;
+.tictac_cell:nth-child(1),
+.tictac_cell:nth-child(2),
+.tictac_cell:nth-child(3) {
+  border-top-color: #ffffff;
+}
+.tictac_cell:nth-child(7),
+.tictac_cell:nth-child(8),
+.tictac_cell:nth-child(9) {
+  border-bottom-color: #ffffff;
 }
 .tictac_cell:hover {
   cursor: pointer;
