@@ -46,7 +46,7 @@ $ grunt serve:dist
 
 ## Testing
 
-You can check build and testing status on [Travis CI](https://travis-ci.org/herereadthis/noonvale)
+Testing is done in PhantomJS. You can check build and testing status on [Travis CI](https://travis-ci.org/herereadthis/noonvale)
 
 ```bash
 # test locally

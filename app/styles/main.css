@@ -117,6 +117,11 @@ a:visited {
 a:hover {
   color: #8c043d;
 }
+@media only screen and (min-width: 1440px) {
+  .bellmaker_container {
+    width: 115.2rem;
+  }
+}
 figure.bellmaker_container {
   overflow: auto;
 }
@@ -131,6 +136,12 @@ figure.bellmaker_container {
   figure.bellmaker_container figcaption {
     width: 48rem;
     height: 48rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  figure.bellmaker_container figcaption {
+    width: 57.6rem;
+    height: 57.6rem;
   }
 }
 figure.bellmaker_container h1 {
@@ -161,6 +172,14 @@ figure.bellmaker_container h1 {
     line-height: 10rem;
   }
 }
+@media only screen and (min-width: 1280px) {
+  figure.bellmaker_container h1 {
+    margin-left: 2rem;
+    padding-top: 13.86666667rem;
+    font-size: 10rem;
+    line-height: 12rem;
+  }
+}
 figure.bellmaker_container #game_status {
   text-align: center;
 }
@@ -186,6 +205,14 @@ figure.bellmaker_container #game_status {
     margin-left: 2rem;
     font-size: 3rem;
     line-height: 3rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  figure.bellmaker_container #game_status {
+    padding-top: 0;
+    margin-left: 2rem;
+    font-size: 4rem;
+    line-height: 4rem;
   }
 }
 @media only screen and (min-width: 320px) {
@@ -224,6 +251,20 @@ figure.bellmaker_container #game_status {
     line-height: 2rem;
   }
 }
+@media only screen and (min-width: 1280px) {
+  [role="contentinfo"] {
+    height: 8rem;
+  }
+  [role="contentinfo"] > div {
+    padding: 3rem 0 0 0;
+    margin-right: 2rem;
+    width: 53.6rem;
+  }
+  [role="contentinfo"] p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
 @media only screen and (min-width: 320px) {
   #tictac_container {
     width: 90vw;
@@ -244,6 +285,13 @@ figure.bellmaker_container #game_status {
     margin: 4rem 2rem 0 0;
     width: 44rem;
     height: 44rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #tictac_container {
+    margin: 4rem 2rem 0 0;
+    width: 53.6rem;
+    height: 53.6rem;
   }
 }
 .tictac_cell {
@@ -280,6 +328,16 @@ figure.bellmaker_container #game_status {
   }
   .tictac_cell > div {
     height: 14.06666667rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .tictac_cell {
+    width: 17.86666667rem;
+    height: 17.86666667rem;
+    border-width: 0.7rem;
+  }
+  .tictac_cell > div {
+    height: 16.46666667rem;
   }
 }
 .tictac_cell:nth-child(3n) {
@@ -325,6 +383,12 @@ figure.bellmaker_container #game_status {
   .tictac_cell p {
     font-size: 10.06666667rem;
     line-height: 14.06666667rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .tictac_cell p {
+    font-size: 12.46666667rem;
+    line-height: 16.46666667rem;
   }
 }
 .tictac_cell .winset_cell {
