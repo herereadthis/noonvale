@@ -310,6 +310,13 @@ module.exports = function (grunt) {
         html: ['<%= yeoman.dist %>/*.html']
       }
     },
+    protractor: {
+      options: {
+        keepAlive: true,
+        configFile: "test/protractor.conf.js"
+      },
+      run: {}
+    },
 
     // Copies remaining files to places other tasks can use
     copy: {
