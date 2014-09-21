@@ -406,13 +406,7 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma:unit'
-  ]);
-  grunt.registerTask('test:e2e', [
-    'clean:server',
-    'concurrent:test',
-    'autoprefixer',
-    'connect:test',
+    'karma:unit',
     'karma:e2e'
   ]);
 
