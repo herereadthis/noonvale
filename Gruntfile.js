@@ -310,6 +310,14 @@ module.exports = function (grunt) {
         html: ['<%= yeoman.dist %>/*.html']
       }
     },
+    webdriver: {
+      options: {
+        startCommand: 'webdriver-manager start'
+      }
+      // your_target: {
+      //   // Target-specific file lists and/or options go here.
+      // },
+    },
     protractor: {
       options: {
         keepAlive: true,
@@ -366,10 +374,10 @@ module.exports = function (grunt) {
 
     // Test settings
     karma: {
-      e2e: {
-        configFile: 'test/karma-e2e.conf.js',
-        singleRun: true
-      },
+      // e2e: {
+      //   configFile: 'test/karma-e2e.conf.js',
+      //   singleRun: true
+      // },
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
@@ -399,12 +407,14 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', [
-    'karma:e2e',
+    // 'karma:e2e',
     'clean:server',
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma:unit'
+    'karma:unit',
+    'webdriver',
+    'protractor:run'
   ]);
 
   grunt.registerTask('build', [
