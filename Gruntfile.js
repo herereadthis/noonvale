@@ -366,16 +366,17 @@ module.exports = function (grunt) {
 
     // Test settings
     karma: {
-      unit: {
-        configFile: 'test/karma.conf.js',
+      e2e: {
+        configFile: 'test/karma-e2e.conf.js',
         singleRun: true
       },
-       e2e: {
-        configFile: 'test/karma-e2e.conf.js',
+      unit: {
+        configFile: 'test/karma.conf.js',
         singleRun: true
       }
     }
   });
+
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -402,8 +403,8 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma:unit'
-    // 'karma:e2e'
+    'karma:unit',
+    'karma:e2e'
   ]);
 
   grunt.registerTask('build', [

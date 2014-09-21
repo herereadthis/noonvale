@@ -10,10 +10,11 @@ module.exports = function(config) {
         files: [
             'e2e/**/*.js'
         ],
+
         // list of files / patterns to exclude
         exclude: [],
         // web server port
-        port: 9000,
+        port: 9001,
         // level of logging
         // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
         logLevel: config.LOG_INFO,
