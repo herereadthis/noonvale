@@ -14,12 +14,14 @@ Noonvale is simple Tic-Tac-Toe game written with AngularJS
 
 ## Requirements
 
-You need Node Package Mangager (npm), Bower, and Grunt
+You need Node Package Mangager (npm)
 
 ```bash
 # check NPM
 $ npm --version
 # else, go to http://nodejs.org/ to install
+# Alternate: use Homebrew
+$ brew install node
 # check Bower
 $ bower --version 
 # if not,
@@ -37,7 +39,8 @@ $ sudo npm install -g grunt
 $ git clone https://github.com/herereadthis/noonvale.git
 $ cd noonvale/
 $ npm install
-$ bower install
+# install Bower dependencies
+$ npm run bower
 # work in developer mode
 $ grunt serve
 # work in production mode (minified, concactenated)
