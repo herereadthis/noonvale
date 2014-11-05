@@ -15,14 +15,14 @@ angular.module('noonvaleApp')
             undefined,undefined,undefined,
             undefined,undefined,undefined,
             undefined,undefined,undefined
-        ];
+          ];
         // messages to be displayed for game status
         statusMessage = {
             'gameOn': 'Make a move!',
             'winnerX': 'Winner is X!',
             'winnerY': 'Winner is O!',
             'tieGame': 'Everyone loses!'
-        };
+          };
         // scope for cells is undefined array length 9
         $scope.ticTac = freshArray;
         // Mark turns for the game
@@ -32,22 +32,22 @@ angular.module('noonvaleApp')
         $scope.winner = {
             'identity': false,
             'winSet': []
-        };
+          };
         // initial status is "Make a move"
         $scope.gameStatus = statusMessage.gameOn;
         // function for ngClass, mark classes for selected cells
         $scope.clickSelect = function(index) {
             var classString = '';
             if ($scope.ticTac[index] !== undefined) {
-                if ($scope.ticTac[index] === 1) {
-                    classString = classString + ' selected mark_x';
+              if ($scope.ticTac[index] === 1) {
+                  classString = classString + ' selected mark_x';
                 }
                 else {
                     classString = classString + ' selected mark_o';
-                }
+              }
             }
             return classString;
-        };
+      };
         // function for ngClass, will visibly show the winning cells
         $scope.markWinSet = function(index) {
             var _i;
