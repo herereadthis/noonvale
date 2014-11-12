@@ -55,9 +55,16 @@ code {
 pre > code {
   white-space: pre;
 }
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
 .bellmaker_container {
   margin-right: auto;
   margin-left: auto;
+  overflow: auto;
 }
 @media only screen and (min-width: 320px) {
   .bellmaker_container {

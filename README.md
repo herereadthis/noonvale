@@ -22,14 +22,6 @@ $ npm --version
 # else, go to http://nodejs.org/ to install
 # Alternate: use Homebrew
 $ brew install node
-# check Bower
-$ bower --version 
-# if not,
-$ sudo npm install -g bower
-# check grunt
-$ grunt --version
-# if not,
-$ sudo npm install -g grunt
 
 ```
 
@@ -41,10 +33,12 @@ $ cd noonvale/
 $ npm install
 # install Bower dependencies
 $ npm run bower
+# run Grunt automated tasks
+$ npm run grunt
 # work in developer mode
-$ grunt serve
+$ npm run server
 # work in production mode (minified, concactenated)
-$ grunt serve:dist
+$ npm run prod
 ```
 
 ## Testing
