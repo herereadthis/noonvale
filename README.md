@@ -3,6 +3,7 @@ Noonvale
 
 [![Build Status](https://secure.travis-ci.org/herereadthis/noonvale.svg?branch=master)](http://travis-ci.org/herereadthis/noonvale)
 [![devDependency Status](https://david-dm.org/herereadthis/noonvale/dev-status.svg)](https://david-dm.org/herereadthis/noonvale#info=devDependencies)
+[![Code Climate](https://codeclimate.com/github/herereadthis/noonvale/badges/gpa.svg)](https://codeclimate.com/github/herereadthis/noonvale)
 
 Noonvale is simple Tic-Tac-Toe game written with AngularJS
 
